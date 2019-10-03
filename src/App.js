@@ -9,6 +9,9 @@ function App() {
   const [ball, setBall] = useState(0);
   const [hit, setHit] = useState(0);
   const [foul, setFoul] = useState(0);
+  const [out, setOut] = useState(0);
+  const [run, setRun] = useState(0);
+  const [error, setError] = useState(0);
 
 
   return (
@@ -17,12 +20,18 @@ function App() {
         strike={strike}
         ball={ball}
         hit={hit} 
-        foul={foul} />
+        foul={foul}
+        out={out}
+        run={run}
+        error={error} />
       <Dashboard 
         strike={strike} setStrike={setStrike}
         ball={ball} setBall={setBall}
         hit={hit}  setHit={setHit}
         foul={foul} setFoul={setFoul}
+        out={out} setOut={setOut}
+        run={run} setRun={setRun}
+        error={error} setError={setError}
         />
     </div>
   );
